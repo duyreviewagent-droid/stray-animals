@@ -1,0 +1,3 @@
+# the built Mac app — run mac/build.sh to make it
+*.app/
+.DS_Store

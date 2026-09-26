@@ -1,0 +1,12 @@
+# Stray Animals on Render: a free static site, so the URL is permanent and never sleeps.
+# The whole game is web/public — there is nothing to build and no server to run.
+services:
+  - type: web
+    name: stray-animals
+    runtime: static
+    buildCommand: echo "nothing to build"
+    staticPublishPath: web/public
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
